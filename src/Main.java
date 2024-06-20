@@ -1,15 +1,24 @@
+import javax.swing.*;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        String primerNumero = JOptionPane.showInputDialog("Ingrese el primer numero");
+        String segundoNumero = JOptionPane.showInputDialog("Ingrese el segundo numero");
+
+        int numero1 = Integer.parseInt(primerNumero);
+        int numero2 = Integer.parseInt(segundoNumero);
+
+        int suma = numero1 + numero2;
+        int resta = numero1 - numero2;
+        int multiplicacion = numero1 * numero2;
+        double division = (double) numero1 / numero2;
+
+        JOptionPane.showMessageDialog(null, "El resultado de la suma es: " + suma,"Suma de enteros",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "El resultado de la resta es: " + resta,"Resta de enteros",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "El resultado de la multiplicacion es: " + multiplicacion,"Multiplicacion de enteros",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "El resultado de la division es: " + division,"division enteros",JOptionPane.PLAIN_MESSAGE);
     }
 }
